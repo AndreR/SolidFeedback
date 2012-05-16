@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+@media all {
+
+html[lang],
+html>head:first-child+body {
+	background-color: white;
+	color: black;
+}
+
+HTML {
+	background: inherit;
+	color: inherit;
+}
+
+html>head:first-child+body {
+	font-size: 95%;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+html>head:first-child+body abbr {
+	font-style: normal;
+	font-variant: normal;
+}
+
+html>head:first-child+body abbr[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+html>head:first-child+body a:link abbr[title],
+html>head:first-child+body a:visited abbr[title] {
+	cursor: pointer;
+}
+
+html>head:first-child+body a:link,
+html>head:first-child+body a:visited {
+	background: white;
+	color: gray;
+}
+
+html>head:first-child+body a:link:hover,
+html>head:first-child+body a:visited:hover,
+html>head:first-child+body a:link:active,
+html>head:first-child+body a:visited:active,
+html>head:first-child+body a:link:focus,
+html>head:first-child+body a:visited:focus {
+	text-decoration: none;
+}
+
+html>head:first-child+body p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+html>head:first-child+body h1 {
+	margin-top: 0.82em;
+	margin-bottom: 0.82em;
+	text-align: center;
+	font-size: 1.59em;
+}
+
+html>head:first-child+body h1 .beta {
+	font-size: 0.54em;
+	color: silver;
+}
+
+html>head:first-child+body div.wrapping {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	width: 800px;
+	text-align: left;
+	font-size: 1.05em;
+}
+
+html>head:first-child+body p.members br {
+	display: none;
+}
+
+html>head:first-child+body span.picture {
+	float: right;
+	display: block;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: 172px;
+	height: 247px;
+	background: url(../images/picture_frame.png) no-repeat;
+}
+
+html>head:first-child+body span.picture img {
+	margin-top: 6px;
+	margin-left: 6px;
+}
+
+html>head:first-child+body #permalink {
+	font-size: 0.7em;
+}
+
+html>head:first-child+body .foobar {
+	clear: both;
+}
+
+html>head:first-child+body textarea {
+	margin-top: 1.06em;
+	width: 100%;
+	height: 4em;
+	font-family: Arial, Helvetica, sans-serif;
+	-ms-transition: height 1s;
+	-moz-transition: height 1s;
+	-webkit-transition: height 1s;
+	-o-transition: height 1s;
+	transition: height 1s;
+}
+
+html>head:first-child+body textarea:focus {
+	height: 10em;
+}
+
+html>head:first-child+body div.contact p {
+	margin: 0;
+	padding: 0 0 1em 0;
+	float: left;
+	width: 50%;
+}
+
+html>head:first-child+body div.contact span.odd {
+	position: relative;
+	display: block;
+	padding-right: 0.5em;
+}
+
+html>head:first-child+body div.contact span.even {
+	position: relative;
+	display: block;
+	padding-left: 0.5em;
+}
+
+html>head:first-child+body div.contact input {
+	width: 100%;
+}
+
+html>head:first-child+body div.disclaimer {
+	font-style: italic;
+/*
+	color: silver;
+	-ms-transform: scale(0.80);
+	-moz-transform: scale(0.80);
+	-webkit-transform: scale(0.80);
+	-o-transform: scale(0.80);
+	transform: scale(0.80);
+	-ms-transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+*/
+}
+
+/*
+html>head:first-child+body div.disclaimer:hover,
+html>head:first-child+body div.disclaimer:focus {
+	color: black;
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+*/
+
+html>head:first-child+body p.submit {
+	text-align: center;
+}
+
+html>head:first-child+body p.submit input {
+	width: 50%;
+}
+
+html>head:first-child+body footer {
+	margin: 0;
+	padding: 0;
+}
+
+html>head:first-child+body p.copyright {
+	padding: 0.5em;
+	border-top: 1px solid gray;
+	text-align: center;
+	color: gray;
+	font-size: 0.8em;
+}
+
+}
