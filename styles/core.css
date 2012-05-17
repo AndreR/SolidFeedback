@@ -14,6 +14,8 @@ HTML {
 }
 
 html>head:first-child+body {
+	margin-bottom: 0;
+	padding-bottom: 0;
 	font-size: 95%;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
@@ -70,9 +72,14 @@ html>head:first-child+body div.wrapping {
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
-	width: 800px;
+	width: 50em;
+	min-width: 800px;
 	text-align: left;
 	font-size: 1.05em;
+}
+
+html>head:first-child+body a.permalink {
+	font-size: 0.7em;
 }
 
 html>head:first-child+body p.members br {
@@ -84,18 +91,14 @@ html>head:first-child+body span.picture {
 	display: block;
 	margin-right: 5px;
 	margin-bottom: 5px;
-	width: 172px;
+	width: 183px;
 	height: 247px;
 	background: url(../images/picture_frame.png) no-repeat;
 }
 
 html>head:first-child+body span.picture img {
 	margin-top: 6px;
-	margin-left: 6px;
-}
-
-html>head:first-child+body #permalink {
-	font-size: 0.7em;
+	margin-left: 17px;
 }
 
 html>head:first-child+body .foobar {
@@ -184,11 +187,16 @@ html>head:first-child+body footer {
 }
 
 html>head:first-child+body p.copyright {
-	padding: 0.5em;
+	margin-bottom: 0;
+	padding: 0.5em 0;
 	border-top: 1px solid gray;
 	text-align: center;
 	color: gray;
 	font-size: 0.8em;
+}
+
+html>head:first-child+body p.copyright span.name {
+	white-space: nowrap;
 }
 
 }

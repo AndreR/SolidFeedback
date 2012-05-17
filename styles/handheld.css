@@ -3,4 +3,46 @@
 @media all
 {
 
+html>head:first-child+body div.wrapping {
+	width: auto;
+	min-width: 0;
+}
+
+html>head:first-child+body p.members {
+}
+
+html>head:first-child+body span.picture_frame {
+	display: block;
+	text-align: center;
+}
+
+html>head:first-child+body span.picture {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-left: auto;
+	float: none;
+	text-align: left;
+}
+
+html>head:first-child+body textarea,
+html>head:first-child+body textarea:focus {
+	height: 10em;
+}
+
+html>head:first-child+body div.contact p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0;
+	float: none;
+	width: 100%;
+}
+
+html>head:first-child+body div.contact span.odd {
+	padding-right: 0;
+}
+
+html>head:first-child+body div.contact span.even {
+	padding-left: 0;
+}
+
 }

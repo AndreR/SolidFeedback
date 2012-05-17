@@ -11,6 +11,7 @@ header("Expires: 0");
 <head>
 <meta charset="utf-8" />
 <title>SolidFeedback [Beta]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" media="handheld, screen" href="styles/core.css" />
 <link rel="stylesheet" media="handheld, only screen and (max-device-width:480px)" href="styles/handheld.css" />
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
@@ -33,9 +34,7 @@ foreach(getMemberList() as $member) {
 	echo ">" . htmlspecialchars($name, ENT_QUOTES | ENT_XHTML, 'UTF-8') . "</option>\n";
 }
 ?>
-</select> <a rel="bookmark" href="http://solidfeedback.de" id="permalink" title="Du kannst diesen Link weitergeben, um direkt auf die ausgewählte Person zu verweisen." tabindex="20">Permanentlink</a><br />
-<span class="picture"><img id="picture" src="" alt="" /></span>
-</p>
+</select></p>
 
 <p class="foobar"><label for="Verhalten">Genaue Beschreibung des Verhaltens, das dich stört/gestört hat:</label><br />
 <textarea id="Verhalten" name="Verhalten" placeholder="Bitte beschreibe das Verhalten hier möglichst exakt, so dass auch ein Dritter verstehen kann, was vorgefallen ist. Bitte beschreibe das Verhalten in diesem Feld zuersteinmal neutral und ohne Wertung. Wenn nötig und sinnvoll, gib auch Webquellen etc. an, an denen das Verhalten nachvollzogen werden kann." tabindex="30"></textarea></p>
@@ -54,9 +53,9 @@ foreach(getMemberList() as $member) {
 <p><span class="odd"><label for="KontaktName">Wie heißt du?</label><br />
 <input type="text" id="KontaktName" name="KontaktName" tabindex="70" /></span></p>
 <p><span class="even"><label for="KontaktEmail">E-Mail-Adresse:</label><br />
-<input type="text" id="KontaktEmail" name="KontaktEmail" tabindex="80" /></span></p>
+<input type="email" id="KontaktEmail" name="KontaktEmail" tabindex="80" /></span></p>
 <p><span class="odd"><label for="KontaktTelefon">Telefon- oder Handynummer:</label><br />
-<input type="text" id="KontaktTelefon" name="KontaktTelefon" tabindex="90" /></span></p>
+<input type="tel" id="KontaktTelefon" name="KontaktTelefon" tabindex="90" /></span></p>
 <p><span class="even"><label for="KontaktWiki">Benutzername im Piraten-Wiki:</label><br />
 <input type="text" id="KontaktWiki" name="KontaktWiki" tabindex="100" /></span></p>
 <p><span class="odd"><label for="KontaktTwitter">Twitter-Benutzername:</label><br />
@@ -76,7 +75,7 @@ foreach(getMemberList() as $member) {
 </form>
 
 <footer>
-<p class="copyright"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/de/" tabindex="160"><abbr lang="en" xml:lang="en" title="Creative Commons Attribution-ShareAlike">CC BY-SA</abbr></a> André Reichelt, Johannes Ponader, Alina Friedrichsen</p>
+<p class="copyright"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/de/" tabindex="160"><abbr lang="en" xml:lang="en" title="Creative Commons Attribution-ShareAlike">CC BY-SA</abbr></a> <span class="name">André Reichelt</span>, <span class="name">Johannes Ponader</span>, <span class="name">Alina Friedrichsen</span></p>
 </footer>
 </div>
 

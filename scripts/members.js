@@ -1,6 +1,8 @@
 function Members(elementId) {
 	var loaded = false;
 	var selectElement = null;
+	var permalinkElement = null;
+	var pictureElement = null;
 
 	function addEventListener(target, type, listener) {
 		if(target.addEventListener) {
@@ -21,8 +23,8 @@ function Members(elementId) {
 
 	function onchange(evt) {
 		var name = encodeURIComponent(selectElement.value);
-		document.getElementById("picture").src = "images/members/" + name + ".jpg";
-		document.getElementById("permalink").href = "?to=" + name.replace("%20", "+");
+		permalinkElement.setAttribute("href", "?to=" + name.replace("%20", "+"));
+		pictureElement.setAttribute("src", "images/members/" + name + ".jpg");
 	}
 
 	function onload(evt) {
@@ -32,8 +34,32 @@ function Members(elementId) {
 		selectElement = document.getElementById(elementId);
 		if(!selectElement) return;
 
-		addEventListener(selectElement, "change", onchange);
+		var parentElement = selectElement.parentNode;
+		if(!parentElement) return;
 
+		parentElement.appendChild(document.createTextNode(" "));
+
+		permalinkElement = createElement("a");
+		permalinkElement.setAttribute("class", "permalink");
+		permalinkElement.setAttribute("rel", "bookmark");
+		permalinkElement.setAttribute("title", "Du kannst diesen Link weitergeben, um direkt auf die ausgewählte Person zu verweisen.");
+		permalinkElement.setAttribute("tabindex", "20");
+		permalinkElement.appendChild(document.createTextNode("Permanentlink"));
+		parentElement.appendChild(permalinkElement);
+
+		parentElement.appendChild(createElement("br"));
+
+		var outerElement = createElement("span");
+		outerElement.setAttribute("class", "picture_frame");
+		var innerElement = createElement("span");
+		innerElement.setAttribute("class", "picture");
+		pictureElement = createElement("img");
+		pictureElement.setAttribute("alt", "");
+		innerElement.appendChild(pictureElement);
+		outerElement.appendChild(innerElement);
+		parentElement.appendChild(outerElement);
+
+		addEventListener(selectElement, "change", onchange);
 		onchange(null);
 	}
 
