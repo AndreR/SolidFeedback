@@ -1,5 +1,5 @@
 <?php
-require_once('members/members.php');
+require_once('include/members.php');
 require_once('include/ticket.php');
 
 $header  = "From: SolidFeedback <noreply@solidfeedback.de>" . "\r\n";
@@ -25,8 +25,10 @@ function getHtmlFoot() {
 <head>
 <meta charset="utf-8" />
 <title>SolidFeedback – Ticket erfolgreich abgesendet.</title>
-<link href="screen.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" media="handheld, screen" href="styles/core.css" />
+<link rel="stylesheet" media="handheld, only screen and (max-device-width:480px)" href="styles/handheld.css" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
 </head>
 <body>
 <?php

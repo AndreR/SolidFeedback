@@ -1,1 +1,2 @@
 php_value display_errors 1
+php_value error_reporting E_ALL
