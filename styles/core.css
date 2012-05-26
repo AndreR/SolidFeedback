@@ -78,6 +78,11 @@ html>head:first-child+body div.wrapping {
 	font-size: 1.05em;
 }
 
+html>head:first-child+body p.success,
+html>head:first-child+body p.backlink {
+	text-align: center;
+}
+
 html>head:first-child+body a.permalink {
 	font-size: 0.7em;
 }
@@ -110,11 +115,14 @@ html>head:first-child+body textarea {
 	width: 100%;
 	height: 4em;
 	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	transition: height 1s;
 	-ms-transition: height 1s;
 	-moz-transition: height 1s;
 	-webkit-transition: height 1s;
 	-o-transition: height 1s;
-	transition: height 1s;
 }
 
 html>head:first-child+body textarea:focus {
@@ -142,36 +150,14 @@ html>head:first-child+body div.contact span.even {
 
 html>head:first-child+body div.contact input {
 	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 html>head:first-child+body div.disclaimer {
 	font-style: italic;
-/*
-	color: silver;
-	-ms-transform: scale(0.80);
-	-moz-transform: scale(0.80);
-	-webkit-transform: scale(0.80);
-	-o-transform: scale(0.80);
-	transform: scale(0.80);
-	-ms-transition: all 1s;
-	-moz-transition: all 1s;
-	-webkit-transition: all 1s;
-	-o-transition: all 1s;
-	transition: all 1s;
-*/
 }
-
-/*
-html>head:first-child+body div.disclaimer:hover,
-html>head:first-child+body div.disclaimer:focus {
-	color: black;
-	-ms-transform: scale(1);
-	-moz-transform: scale(1);
-	-webkit-transform: scale(1);
-	-o-transform: scale(1);
-	transform: scale(1);
-}
-*/
 
 html>head:first-child+body p.submit {
 	text-align: center;
@@ -179,6 +165,9 @@ html>head:first-child+body p.submit {
 
 html>head:first-child+body p.submit input {
 	width: 50%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 html>head:first-child+body footer {

@@ -45,4 +45,8 @@ html>head:first-child+body div.contact span.even {
 	padding-left: 0;
 }
 
+html>head:first-child+body p.submit input {
+	width: auto;
+}
+
 }
