@@ -35,17 +35,17 @@ function getHtmlFoot() {
 $ticket = new Ticket();
 
 // Datenaufbereitung
-$ticket->contactName = $_POST['KontaktName'];
-$ticket->contactEmail = $_POST['KontaktEmail'];
-$ticket->contactTelefon = $_POST['KontaktTelefon'];
-$ticket->contactWiki = $_POST['KontaktWiki'];
-$ticket->contactTwitter = str_replace('@', '', $_POST['KontaktTwitter']);
-$ticket->contactSonstige = $_POST['KontaktSonstige'];
-$ticket->concernedPerson = $_POST['Betreffender'];
-$ticket->matter = $_POST['Verhalten'];
-$ticket->issue = $_POST['WasGestoert'];
-$ticket->betterSolution = $_POST['VerhaltenStatdessen'];
-$ticket->rectification = $_POST['VerhaltenJetzt'];
+$ticket->contactName = htmlentities($_POST['KontaktName'],ENT_COMPAT,"utf8");
+$ticket->contactEmail = htmlentities($_POST['KontaktEmail'],ENT_COMPAT,"utf8");
+$ticket->contactTelefon = htmlentities($_POST['KontaktTelefon'],ENT_COMPAT,"utf8");
+$ticket->contactWiki = htmlentities($_POST['KontaktWiki'],ENT_COMPAT,"utf8");
+$ticket->contactTwitter = htmlentities(str_replace('@', '', $_POST['KontaktTwitter']),ENT_COMPAT,"utf8");
+$ticket->contactSonstige = htmlentities($_POST['KontaktSonstige'],ENT_COMPAT,"utf8");
+$ticket->concernedPerson = htmlentities($_POST['Betreffender'],ENT_COMPAT,"utf8");
+$ticket->matter = htmlentities($_POST['Verhalten'],ENT_COMPAT,"utf8");
+$ticket->issue = htmlentities($_POST['WasGestoert'],ENT_COMPAT,"utf8");
+$ticket->betterSolution = htmlentities($_POST['VerhaltenStatdessen'],ENT_COMPAT,"utf8");
+$ticket->rectification = htmlentities($_POST['VerhaltenJetzt'],ENT_COMPAT,"utf8");
 $ticket->isPublic = ((isset($_POST['Oeffentlich']) && $_POST['Oeffentlich'] == 'Veroeffentlichen') ? true : false);
 
 // Push to database
